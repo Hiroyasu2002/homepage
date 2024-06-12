@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-top: 60px; /* ヘッダーの高さ分のパディングを追加 */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 a {
+    text-decoration: none;
+    color:#fff;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    display:block;
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    padding: 2rem 0;
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    /* overflow: hidden; */
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 画像間の間隔 */
+}
+
+figure {
+    flex: 1 1 300px; /* 画像の幅 */
+    max-width: 100%; /* 画像の最大幅を100%に設定 */
+    margin: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) { /* 幅が600px以下の場合 */
+    figure {
+        flex-basis: 100%; /* 画像の幅を100%に設定して改行 */
+    }
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer .container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Navigation styling for small screens */
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+    nav ul li a {
+        padding: 1rem;
+        display: block;
+        border-bottom: 1px solid #444;
+    }
+    nav ul li a:hover {
+        text-decoration: none;
+        background-color: #555;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .menu-toggle.active + ul {
+        display: flex;
+    }
+}
