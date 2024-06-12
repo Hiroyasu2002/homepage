@@ -69,6 +69,7 @@ nav ul li a:hover {
 
 .flex {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px; /* 画像間の間隔 */
 }
@@ -77,7 +78,6 @@ figure {
     flex: 1 1 300px; /* 画像の幅 */
     max-width: 100%; /* 画像の最大幅を100%に設定 */
     margin: 10px;
-    justify-content: space-around;
 }
 
 img {
